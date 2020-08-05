@@ -8,6 +8,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
+import { SaucersComponent } from './components/saucers/saucers.component';
+import { CombosComponent } from './components/combos/combos.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
     HomeComponent,
     NavbarComponent,
     FooterComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    SaucersComponent,
+    CombosComponent
   ],
   imports: [
     BrowserModule,
