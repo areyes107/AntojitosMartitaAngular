@@ -22,7 +22,7 @@ export class SaucerService {
   constructor(private http: HttpClient) { }
 
   getSaucers():Observable<any>{
-    return this.http.get(this.endpoint + 'findAll', this.httOptions).pipe(map(this.extractData));
+    return this.http.get(this.endpoint + 'showSaucer', this.httOptions).pipe(map(this.extractData));
   }
 
   getSaucer(search){
