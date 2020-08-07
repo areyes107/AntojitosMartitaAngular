@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class SaucerService {
-  endpoint='http://localhost:3800/food';
+  endpoint='http://localhost:3800/food/';
   httOptions ={
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
