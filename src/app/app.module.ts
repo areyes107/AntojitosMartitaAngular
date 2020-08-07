@@ -10,6 +10,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { SaucersComponent } from './components/saucers/saucers.component';
 import { CombosComponent } from './components/combos/combos.component';
+import { SearchPipe } from './pipes/search.pipe';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { CombosComponent } from './components/combos/combos.component';
     FooterComponent,
     NotfoundComponent,
     SaucersComponent,
-    CombosComponent
+    CombosComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
