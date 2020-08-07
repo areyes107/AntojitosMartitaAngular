@@ -18,7 +18,8 @@ export class SaucersComponent implements OnInit {
 
   getSaucers(){
     this.restSaucer.getSaucers().subscribe(res=>{
-      this.saucers = res.saucers;
+      console.log(res)
+      this.saucers = res.saucerFound;
       console.log(this.saucers);
     })
   }
