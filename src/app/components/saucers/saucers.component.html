@@ -1,3 +1,16 @@
 <app-navbar></app-navbar>
+<br>
+<form class="form-inline my-2 my-lg-0" (ngSubmit)="onSubmit()">
+    <input [(ngModel)]="search" name="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+  </form>
+  <br>
+  <div class="card" style="width: 18rem; display: inline-block; margin: 5px;" *ngFor="let saucer of saucers | search:search">
+      <div class="card-body">
+        <h5 class="card-title">{{saucer.data.name}} | {{saucer.data.ingredients}} Ingredients:</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{saucer.data.description}}</h6>
+        <p class="card-text">Price: Q{{saucer.data.price}}</p>
+        <a href="#" class="card-link">Show more</a>
+      </div>
+  </div>
 
 <app-footer>  </app-footer>
