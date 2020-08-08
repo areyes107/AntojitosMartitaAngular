@@ -11,10 +11,10 @@
 #container {
     display: block;
     float: left;
-    background-color: #666666;
+    background-color: white;
     width: 30%;
     height: 290px;
-    border: 1px solid white;
+    border: 1px solid black;
     margin: 22px;
     text-align: center;
     padding-top: 80px;
@@ -23,11 +23,11 @@
 .container-principal {
     width: 100%;
     height: 333px;
-    background-color: #666666;
+    background-color: white;
 }
 
 .container-principal h2 {
-    color: white;
+    color: black;
 }
 
 .container-principal #button-container {
@@ -40,10 +40,10 @@
     width: 170px;
     height: 48px;
     padding: 10px;
-    background-color: #666666;
+    background-color: white;
     border-radius: 10px;
     color: white;
-    border: 1px solid white;
+    border: 1px solid black;
     transition: all 300ms;
 }
 
@@ -67,4 +67,8 @@
 
 .container-extra #container img {
     height: 100px;
+}
+
+#button {
+    color: black;
 }
