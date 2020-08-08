@@ -1,0 +1,70 @@
+#carouselExampleIndicators {
+    height: 552px;
+    overflow: hidden;
+}
+
+.clearFix {
+    float: none;
+    clear: both;
+}
+
+#container {
+    display: block;
+    float: left;
+    background-color: #666666;
+    width: 30%;
+    height: 290px;
+    border: 1px solid white;
+    margin: 22px;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.container-principal {
+    width: 100%;
+    height: 333px;
+    background-color: #666666;
+}
+
+.container-principal h2 {
+    color: white;
+}
+
+.container-principal #button-container {
+    padding-top: 13px;
+    padding-left: 120px;
+    cursor: pointer;
+}
+
+.container-principal #button {
+    width: 170px;
+    height: 48px;
+    padding: 10px;
+    background-color: #666666;
+    border-radius: 10px;
+    color: white;
+    border: 1px solid white;
+    transition: all 300ms;
+}
+
+.container-principal #button:hover {
+    background-color: white;
+    color: #666666;
+}
+
+.container-extra {
+    display: block;
+    width: 100%;
+    height: 500px;
+    background-color: #343A40;
+}
+
+.container-extra #container {
+    width: 46.5%;
+    height: 450px;
+    background-color: #343A40;
+}
+
+.container-extra #container img {
+    height: 100px;
+}

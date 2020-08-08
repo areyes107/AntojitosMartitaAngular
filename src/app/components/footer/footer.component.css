@@ -1,37 +1,91 @@
 /* Sticky footer styles
 -------------------------------------------------- */
+
+@font-face {
+    font-family: 'WebSymbolsRegular';
+    src: url('../../../assets/fonts/WebSymbols-Regular.otf')
+}
+
 html {
     position: relative;
     min-height: 100%;
-  }
-  body {
+}
+
+body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
-  }
-  .footer {
-    position: sticky;
+}
+
+.footer {
     bottom: 0%;
     width: 100%;
     /* Set the fixed height of the footer here */
-    height: 75px;
-        
-    background-color: #f5f5f5;
-  }
-  
-  
-  /* Custom page CSS
+    height: 200px;
+    background-color: #666666;
+}
+
+.text-muted {
+    color: white !important;
+}
+
+.text-muted p {
+    padding-top: 40px;
+}
+
+#social {
+    font-family: 'WebSymbolsRegular';
+    height: 50px;
+    padding-left: 461px;
+}
+
+#social a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.twitter {
+    height: 50px;
+    width: 50px;
+    float: left;
+}
+
+.facebook {
+    height: 50px;
+    width: 50px;
+    float: left;
+}
+
+.google {
+    height: 50px;
+    width: 50px;
+    float: left;
+}
+
+#bottom-text {
+    padding-top: 2px;
+    font-size: 13px;
+}
+
+
+/* Custom page CSS
   -------------------------------------------------- */
-  /* Not required for template or sticky footer method. */
-  
-  body > .container {
+
+
+/* Not required for template or sticky footer method. */
+
+body>.container {
     padding: 60px 15px 0;
-  }
-  
-  .footer > .container {
+}
+
+.footer>.container {
     padding-right: 15px;
     padding-left: 15px;
-  }
-  
-  code {
+}
+
+code {
     font-size: 80%;
-  }
+}
