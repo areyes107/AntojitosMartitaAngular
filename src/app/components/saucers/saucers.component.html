@@ -8,7 +8,7 @@
   <div class="row row-cols-1 row-cols-md-5" style="text-align: center; position: relative; margin-left: 15%;"> 
   <div class="card" style="width: 18rem; display: inline-block; margin: 5px;" *ngFor="let saucer of saucers | search:search">
       <div class="card-body">
-        <img src="..." class="card-img-top" alt="...">
+        <img [src]="saucer.photoUrl" class="card-img-top" [alt]="saucer.name">
         <h5 class="card-title">{{saucer.name}}</h5>
         <h6 class="card-subtitle mb-2 text-muted"> Descripción: {{saucer.description}} <br> <br>
             Ingredientes: {{saucer.ingredients}} 
