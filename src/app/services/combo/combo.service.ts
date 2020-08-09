@@ -6,9 +6,9 @@ import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class SaucerService {  
+export class ComboService {
   endpoint='http://localhost:3800/food/';
-  httOptions ={
+  httpOptions={
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
@@ -16,25 +16,25 @@ export class SaucerService {
 
   private extractData (res: Response){
     let body = res;
-    return body || [] || {};
+    return body || [] || {}
   }
 
   constructor(private http: HttpClient) { }
 
-  getSaucers():Observable<any>{
-    return this.http.get(`${this.endpoint}/showSaucer`, this.httOptions).pipe(map(this.extractData));
+  getCombos():Observable<any>{
+    return this.http.get(`${this.endpoint}/showCombo`, this.httpOptions).pipe(map(this.extractData));
   }
 
-  getSaucer(search){
+  getCombo(search){
     var p = {search: search};
     var params = JSON.stringify(p);
 
-    let httpOptionsAuth = {
+    let httpOptionsAuth ={
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        'Authorization': localStorage.getItem('token')
+        'Authorization': localStorage.getItem('token');
       })
     }
-    return this.http.post(this.endpoint + 'getSaucer', params, httpOptionsAuth).pipe(map(this.extractData));
+    return this.http.post(this.endpoint + 'getCombo', params, httpOptionsAuth).pipe(map(this.extractData));
   }
 }
