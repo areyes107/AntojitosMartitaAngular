@@ -11,6 +11,7 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { SaucersComponent } from './components/saucers/saucers.component';
 import { CombosComponent } from './components/combos/combos.component';
 import { SearchPipe } from './pipes/search.pipe';
+import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { SearchPipe } from './pipes/search.pipe';
     NotfoundComponent,
     SaucersComponent,
     CombosComponent,
-    SearchPipe
+    SearchPipe,
+    AcercaDeComponent
   ],
   imports: [
     BrowserModule,
