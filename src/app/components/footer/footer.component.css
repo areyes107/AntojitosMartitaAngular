@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: 'WebSymbolsRegular';
-    src: url('../../../assets/fonts/WebSymbols-Regular.otf')
+    src: url('../../../assets/fonts/SmartphoneFonts.ttf')
 }
 
 html {
@@ -21,7 +21,7 @@ body {
     width: 100%;
     /* Set the fixed height of the footer here */
     height: 200px;
-    background-color: #666666;
+    background-color: #343A40;
 }
 
 .text-muted {
@@ -60,6 +60,12 @@ body {
 }
 
 .google {
+    height: 50px;
+    width: 50px;
+    float: left;
+}
+
+.instagram {
     height: 50px;
     width: 50px;
     float: left;
