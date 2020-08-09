@@ -32,7 +32,7 @@ export class ComboService {
     let httpOptionsAuth ={
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        'Authorization': localStorage.getItem('token');
+        'Authorization': localStorage.getItem('token')
       })
     }
     return this.http.post(this.endpoint + 'getCombo', params, httpOptionsAuth).pipe(map(this.extractData));
