@@ -84,3 +84,51 @@
 .container-extra #container #text {
     width: 51%;
 }
+
+
+
+.container-image{
+    width: 100%;
+    position: relative;
+}
+
+.hero{
+    object-fit: cover;
+    width: 100%;
+}
+
+.back-black{
+    width: 100%;
+    background-color: rgba(0, 0, 0,0.2);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.option{
+    display: block;
+    padding: 8px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+    border-radius: 3px;
+    margin-bottom: 0.5em;
+    margin: 16px;
+    width: 30%;
+    height: 300px;
+    min-width: 320px;
+}
+
+.option h2{
+    padding: 5px;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+}
+
+.container-grid{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
