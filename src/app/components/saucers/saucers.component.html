@@ -23,9 +23,9 @@
 <div class="row" *ngFor="let saucer of saucers | search:search">
   <div class="column">
     <div class="card">
-    <img [src]="saucer.photoUrl" class="card-img-top" [alt]="saucer.name">
+    <img [src]="saucer.photoUrl" class="hero" [alt]="saucer.name">
     <h5 style="text-align: center;">{{saucer.name}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted"> Descripción: {{saucer.description}} <br> <br>
+    <h6 class="card-subtitle mb-2 text-muted">{{saucer.description}} <br> <br>
       Ingredientes: {{saucer.ingredients}} 
   </h6>
   <p style="text-align: center;">Price: Q{{saucer.price}}</p>
