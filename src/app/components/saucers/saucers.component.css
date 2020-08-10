@@ -39,3 +39,8 @@
       margin-bottom: 20px;
     }
   }
+ .hero {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 100%;
+  }
