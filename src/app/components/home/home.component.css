@@ -99,5 +99,7 @@
 
 .hero-2 {
     width: 45%;
+    height: 300px;
+    min-height: 280;
     margin-left: 25%;
 }
