@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 
 <br>  
-
+<!--
 <form class="form-inline my-2 my-lg-0" (ngSubmit)="onSubmit()" style="margin-left: 45%;">
     <input [(ngModel)]="search" name="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
   </form>
@@ -17,7 +17,22 @@
         <p class="card-text">Precio: Q{{combo.price}}</p>
       </div>
   </div>
+</div> -->
+
+<div class="row" *ngFor="let combo of combos | search:search">
+  <div class="column">
+    <div class="card">
+    <img [src]="combo.photoUrl" class="hero" [alt]="combo.name">
+    <h5 style="text-align: center;">{{combo.name}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted"> {{combo.description}} <br> <br>
+      Ingredientes: {{combo.ingredients}} 
+  </h6>
+  <p style="text-align: center;">Price: Q{{combo.price}}</p>
 </div>
+  </div>
+</div>
+
+
 <br>
 
 <app-footer>  </app-footer>
