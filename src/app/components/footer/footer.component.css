@@ -32,39 +32,6 @@ body {
     padding-top: 40px;
 }
 
-#social {
-    font-family: 'WebSymbolsRegular';
-    height: 50px;
-    padding-left: 461px;
-}
-
-#social a {
-    color: white;
-    text-decoration: none;
-    font-size: 25px;
-    margin-left: 32px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-
-.facebook {
-    height: 50px;
-    width: 50px;
-    float: left;
-}
-
-.google {
-    height: 50px;
-    width: 50px;
-    float: left;
-}
-
-.instagram {
-    height: 50px;
-    width: 50px;
-    float: left;
-}
-
 #bottom-text {
     padding-top: 2px;
     font-size: 13px;
@@ -88,4 +55,34 @@ body>.container {
 
 code {
     font-size: 80%;
+}
+
+.social {
+    font-family: 'WebSymbolsRegular';
+    font-size: 24px;
+    margin-bottom: 0.5em;
+    margin: 16px;
+    margin-left: 47%;
+    width: 1%;
+    height: 35px;
+    min-width: 320px;
+    text-decoration: none;
+}
+
+.facebook {
+    float: left;
+    margin: 1%;
+    text-decoration: none;
+}
+
+.google {
+    float: left;
+    margin: 1%;
+    text-decoration: none;
+}
+
+.instagram {
+    float: left;
+    margin: 1%;
+    text-decoration: none;
 }
