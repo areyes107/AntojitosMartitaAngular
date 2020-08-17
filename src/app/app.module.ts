@@ -12,7 +12,8 @@ import { SaucersComponent } from './components/saucers/saucers.component';
 import { CombosComponent } from './components/combos/combos.component';
 import { SearchPipe } from './pipes/search.pipe';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
-
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment.prod';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [
 
