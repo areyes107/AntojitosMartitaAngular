@@ -10,18 +10,18 @@ export class SaucersComponent implements OnInit {
   saucers = [];
   search;
 
-  constructor(private restSaucer: SaucerService) { }
+  constructor(private saucerService: SaucerService) { }
 
   ngOnInit(): void {
     this.getSaucers();
   }
 
   getSaucers(){
-    this.restSaucer.getSaucers().subscribe(res=>{
-      console.log(res)
-      this.saucers = res.saucerFound;
-      console.log(this.saucers);
-    })
+    this.saucerService.getSaucers().subscribe((saucers)=>{
+      this.saucers = saucers.map((saucer)=>{
+        return saucer.payload.doc.data();
+      });
+    });
   }
 
   onSubmit(){
