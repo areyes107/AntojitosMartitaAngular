@@ -1,40 +1,21 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { AngularFirestore, DocumentChangeAction } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Saucer } from '../../model/saucer.interface';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class SaucerService {  
-  endpoint='http://localhost:3800/food/';
-  httOptions ={
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json'
-    })
+export class SaucerService {
+  constructor(private firestore: AngularFirestore) {}
+
+  getSaucers(): Observable<DocumentChangeAction<Saucer>[]> {
+    return this.firestore.collection<Saucer>('saucers').snapshotChanges();
   }
 
-  private extractData (res: Response){
-    let body = res;
-    return body || [] || {};
-  }
-
-  constructor(private http: HttpClient) { }
-
-  getSaucers():Observable<any>{
-    return this.http.get(`${this.endpoint}/showSaucer`, this.httOptions).pipe(map(this.extractData));
-  }
-
-  getSaucer(search){
-    var p = {search: search};
-    var params = JSON.stringify(p);
-
-    let httpOptionsAuth = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-        'Authorization': localStorage.getItem('token')
-      })
-    }
-    return this.http.post(this.endpoint + 'getSaucer', params, httpOptionsAuth).pipe(map(this.extractData));
+  getSaucer(name: string) {
+    return this.firestore.collection<Saucer>('saucers', ref => {
+      return ref.where('name', '==', name);
+    }).snapshotChanges();
   }
 }
