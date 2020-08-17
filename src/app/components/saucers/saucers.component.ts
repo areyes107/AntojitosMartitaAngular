@@ -17,8 +17,8 @@ export class SaucersComponent implements OnInit {
   }
 
   getSaucers(){
-    this.saucerService.getSaucers().subscribe((saucers)=>{
-      this.saucers = saucers.map((saucer)=>{
+    this.saucerService.getSaucers().subscribe((saucers) => {
+      this.saucers = saucers.map((saucer) => {
         return saucer.payload.doc.data();
       });
     });
