@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
       this.loginForm.value.email,
       this.loginForm.value.password
     );
-    console.log(await this.firebaseAuth.currentUser)
+    console.log(await this.firebaseAuth.currentUser);
     this.loading = false;
   }
 }
