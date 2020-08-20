@@ -8,24 +8,19 @@ import { LoginComponent } from './components/login/login.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { SaucersComponent } from './components/saucers/saucers.component';
 
-
 const routes: Routes = [
- {path: '', component: HomeComponent}, // se utiliza solo para la página principal, 1 vez
- {path: 'home', component: HomeComponent},
- {path: 'login', component: LoginComponent},
- {path: 'admin', component: AdminComponent},
- {path: 'saucers', component: SaucersComponent},
- {path: 'combos', component: CombosComponent},
- {path: 'acercaDe', component: AcercaDeComponent},
- {path: '**', component: NotfoundComponent},
- 
+  { path: '', component: HomeComponent }, // se utiliza solo para la página principal, 1 vez
+  { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'admin', component: AdminComponent },
+  { path: 'saucers', component: SaucersComponent },
+  { path: 'combos', component: CombosComponent },
+  { path: 'acercaDe', component: AcercaDeComponent },
+  { path: '**', component: NotfoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { 
-
-
-}
+export class AppRoutingModule {}
