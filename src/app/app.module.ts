@@ -31,7 +31,7 @@ import { SearchPipe } from './pipes/search.pipe';
     SearchPipe,
     AcercaDeComponent,
     AdminComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,13 +41,9 @@ import { SearchPipe } from './pipes/search.pipe';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  providers: [
-
-  ],
-  bootstrap: [
-    AppComponent
-  ]
+  providers: [],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
