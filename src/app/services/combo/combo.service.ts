@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, DocumentChangeAction } from '@angular/fire/firestore';
+import {
+  AngularFirestore,
+  DocumentChangeAction
+} from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Combo } from '../../model/combo.interface';
 
@@ -14,13 +17,13 @@ export class ComboService {
   }
 
   getCombo(name: string) {
-    return this.firestore.collection<Combo>('combos', ref => {
-      return ref.where('name', '==', name);
-    }).snapshotChanges();
+    return this.firestore
+      .collection<Combo>('combos', (ref) => {
+        return ref.where('name', '==', name);
+      })
+      .snapshotChanges();
   }
-  async createCombo (data) {
-    return await this.firestore
-    .collection('combos')
-    .add(data);
+  async createCombo(data) {
+    return await this.firestore.collection('combos').add(data);
   }
 }
