@@ -14,9 +14,9 @@ export class AdminComponent implements OnInit {
   ngOnInit(): void {
     this.checkUser();
   }
-  async checkUser(){
-    console.log(await this.firebaseAuth.currentUser)
-    if (! await this.firebaseAuth.currentUser) {
+  async checkUser() {
+    console.log(await this.firebaseAuth.currentUser);
+    if (!(await this.firebaseAuth.currentUser)) {
       this.router.navigate(['/login']);
     }
     this.loading = false;
