@@ -18,9 +18,9 @@ export class ComboService {
       return ref.where('name', '==', name);
     }).snapshotChanges();
   }
-  createCombo (data) {
-    return await => this.firestore
+  async createCombo (data) {
+    return await this.firestore
     .collection('combos')
-    .add('data');
+    .add(data);
   }
 }
