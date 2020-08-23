@@ -1,6 +1,12 @@
-<Form [formGroup]="loginForm" (submit)="handleSubmit()" *ngIf="!loading">
+<br>
+<Form [formGroup]="loginForm" (submit)="handleSubmit()" *ngIf="!loading" style="text-align: center;">
   <input type="text" formControlName="email" placeholder="Email" />
-  <input type="password" formControlName="password" placeholder="Password" />
+  <br>
+  <br>
+  <input type="password" formControlName="password" placeholder="Password"/>
+  <br>
+  <br>
   <input type="submit" value="Iniciar Sesión" />
 </Form>
 <h1 *ngIf="loading">Cargando</h1>
+<br>
