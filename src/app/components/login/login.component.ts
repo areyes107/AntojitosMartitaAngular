@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,10 +11,18 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
   loading = false;
   loginForm: FormGroup;
-  constructor(private firebaseAuth: AngularFireAuth) {}
+  constructor(private firebaseAuth: AngularFireAuth, private router: Router) {}
 
   ngOnInit(): void {
     this.initializeForm();
+    this.firebaseAuth.onAuthStateChanged((user) => {
+      if (user){
+        localStorage.setItem('user', JSON.stringify(user));
+        this.router.navigate(['/admin']);
+      }else{
+        localStorage.setItem('user', null);
+      }
+    });
   }
 
   initializeForm() {
