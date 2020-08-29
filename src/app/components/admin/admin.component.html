@@ -1,1 +1,24 @@
-<p>admin works!</p>
+<select [(ngModel)]="typeOfSubmit">
+    <option value="saucers">
+        SAUCERS OPTIONS
+    </option>
+    <option value="combos">
+        COMBOS OPTIONS
+    </option>
+</select>
+<br> <br>
+<form [formGroup]="toSubmitForm" (ngSubmit)="submit()">
+    <input type="text" name="name" formControlName="name" placeholder="Nombre">
+    <br> <br>
+    <input type="text" name="ingredients" formControlName="ingredients" placeholder="Ingredientes">
+    <br> <br>
+    <label> Precio</label>
+    <input type="number" name="price" formControlName="price" placeholder="Precio">
+    <br> <br>
+    <textarea name="description" formControlName="description" cols="30" rows="10" placeholder="Descripción"></textarea>
+    <br>
+    <input type="file" (change)="handdleFileChange($event)" accept="image/png, image/jpg">
+    <br> <br>
+    <input type="submit" value="Agregar" *ngIf="!loading">
+</form>
+
