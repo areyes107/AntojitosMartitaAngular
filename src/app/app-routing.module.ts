@@ -5,6 +5,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { CombosComponent } from './components/combos/combos.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { NewsComponent } from './components/news/news.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { SaucersComponent } from './components/saucers/saucers.component';
 
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'admin', component: AdminComponent },
+  { path: 'news', component: NewsComponent },
   { path: 'saucers', component: SaucersComponent },
   { path: 'combos', component: CombosComponent },
   { path: 'acercaDe', component: AcercaDeComponent },
