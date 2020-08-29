@@ -19,6 +19,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { SaucersComponent } from './components/saucers/saucers.component';
 import { SearchPipe } from './pipes/search.pipe';
+import { NewsComponent } from './components/news/news.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { SearchPipe } from './pipes/search.pipe';
     AcercaDeComponent,
     AdminComponent,
     LoginComponent,
+    NewsComponent,
   ],
   imports: [
     BrowserModule,
