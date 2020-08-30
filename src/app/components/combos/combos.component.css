@@ -1,46 +1,46 @@
-* {
-    box-sizing: border-box;
-  }
+.myCard{
   
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  /* Float four columns side by side */
-  .column {
-    float: left;
-    width: 25%;
-    padding: 0 10px;
-  }
-  
-  /* Remove extra left and right margins, due to padding in columns */
-  .row {margin: 0 -5px;}
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Style the counter cards */
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-    padding: 16px;
-    text-align: center;
-    background-color: #f1f1f1;
-  }
-  
-  /* Responsive columns - one column layout (vertical) on small screens */
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
-  }
- .hero {
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    width: 100%;
-  }
+}
+
+.myCard img{
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  height: 360px;
+}
+
+.myGridCards{
+  display: grid;
+  grid-gap: 15px;
+  padding: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.myCard-content{
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0,0.15);
+  margin-bottom: 0.5em; 
+  padding: 16px;
+  margin: 0 16px;
+  margin-top: -32px;
+  position: relative;
+  background-color: white;
+}
+
+.myCard-content h5{
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.myCard-content h6{
+  text-align: center;
+  color: #777;
+}
+
+.myCard-content p{
+  text-align: right;
+  color: #888;
+  font-weight: bold;
+}
