@@ -1,36 +1,17 @@
-<br>  
-
-<!-- 
-<form class="form-inline my-2 my-lg-0" (ngSubmit)="onSubmit()" style="margin-left: 45%;">
-    <input [(ngModel)]="search" name="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-  </form> 
-  -->
-  <!-- 
-  <div class="row row-cols-1 row-cols-md-5" style="text-align: center; position: relative; margin-left: 15%;"> 
-  <div class="card" style="width: 18rem; display: inline-block; margin: 5px;" *ngFor="let saucer of saucers | search:search">
-      <div class="card-body">
-        <img [src]="saucer.photoUrl" class="card-img-top" [alt]="saucer.name">
-        <h5 class="card-title">{{saucer.name}}</h5>
-        <h6 class="card-subtitle mb-2 text-muted"> Descripción: {{saucer.description}} <br> <br>
-            Ingredientes: {{saucer.ingredients}} 
-        </h6>
-        <p class="card-text">Price: Q{{saucer.price}}</p>
-      </div>
-  </div>
-</div> -->
-
-<div class="row" *ngFor="let saucer of saucers | search:search">
-  <div class="column">
-    <div class="card">
-    <img [src]="saucer.photoUrl" class="hero" [alt]="saucer.name">
-    <h5 style="text-align: center;">{{saucer.name}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">{{saucer.description}} <br> <br>
-      Ingredientes: {{saucer.ingredients}} 
-  </h6>
-  <p style="text-align: center;">Price: Q{{saucer.price}}</p>
-</div>
-  </div>
-</div>
-
-
 <br>
+<div class="myGridCards" >
+  <div class="myCard" *ngFor="let saucer of saucers">
+    <div >
+    <img [src]="saucer.photoUrl" >
+  </div>
+<div class="myCard-content">
+    <h5 class="">{{saucer.name}}</h5>
+    <h6 class="">{{saucer.description}}</h6>
+    <h6 class="">Ingredientes: {{saucer.ingredients}}</h6>
+    <p class=""> Price: Q{{saucer.price}} </p>
+  </div>
+</div>
+</div>
+
+
+
