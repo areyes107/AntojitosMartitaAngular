@@ -1,34 +1,15 @@
-<br>  
-<!--
-<form class="form-inline my-2 my-lg-0" (ngSubmit)="onSubmit()" style="margin-left: 45%;">
-    <input [(ngModel)]="search" name="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-  </form>
-  
-  <div class="row row-cols-1 row-cols-md-5" style="text-align: center; position: relative; margin-left: 15%;"> 
-  <div class="card" style="width: 18rem; display: inline-block; margin: 5px;" *ngFor="let combo of combos | search:search">
-      <div class="card-body">
-        <img [src]="combo.photoUrl" class="card-img-top" [alt]="combo.name">
-        <h5 class="card-title">{{combo.name}}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">{{combo.description}} <br> <br>
-            Ingredientes: {{combo.ingredients}} 
-        </h6>
-        <p class="card-text">Precio: Q{{combo.price}}</p>
-      </div>
-  </div>
-</div> -->
-
-<div class="row" *ngFor="let combo of combos | search:search">
-  <div class="column">
-    <div class="card">
-    <img [src]="combo.photoUrl" class="hero" [alt]="combo.name">
-    <h5 style="text-align: center;">{{combo.name}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted"> {{combo.description}} <br> <br>
-      Ingredientes: {{combo.ingredients}} 
-  </h6>
-  <p style="text-align: center;">Price: Q{{combo.price}}</p>
-</div>
-  </div>
-</div>
-
-
 <br>
+<div class="myGridCards" >
+  <div class="myCard" *ngFor="let combo of combos">
+    <div >
+    <img [src]="combo.photoUrl" >
+  </div>
+<div class="myCard-content">
+    <h5 class="">{{combo.name}}</h5>
+    <h6 class="">{{combo.description}}</h6>
+    <h6 class="">Ingredientes: {{combo.ingredients}}</h6>
+    <p class=""> Price: Q{{combo.price}} </p>
+  </div>
+</div>
+</div>
+
