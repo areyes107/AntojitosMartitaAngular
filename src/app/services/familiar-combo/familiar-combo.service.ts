@@ -25,4 +25,7 @@ export class FamiliarComboService {
       })
       .snapshotChanges();
   }
+  async createFamiliarCombo(data){
+    return await this.firestore.collection('familiarCombos').add(data);
+  }
 }
