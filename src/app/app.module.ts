@@ -20,6 +20,7 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { SaucersComponent } from './components/saucers/saucers.component';
 import { SearchPipe } from './pipes/search.pipe';
 import { NewsComponent } from './components/news/news.component';
+import { FamiliarCombosComponent } from './components/familiar-combos/familiar-combos.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { NewsComponent } from './components/news/news.component';
     AdminComponent,
     LoginComponent,
     NewsComponent,
+    FamiliarCombosComponent,
   ],
   imports: [
     BrowserModule,
