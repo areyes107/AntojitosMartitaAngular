@@ -8,6 +8,9 @@
     <option value="combos">
         COMBOS OPTIONS
     </option>
+    <option value="familiarCombos">
+        FAMILIAR COMBO OPTIONS
+    </option>
 </select>
 <br> <br>
 <form [formGroup]="toSubmitForm" (ngSubmit)="submit()">
@@ -20,7 +23,7 @@
     <br> <br>
     <textarea name="description" formControlName="description" cols="30" rows="10" placeholder="Descripción"></textarea>
     <br>
-    <input type="file" (change)="handdleFileChange($event)" accept="image/png, image/jpg">
+    <input type="file" (change)="handdleFileChange($event)" accept="image/png, image/jpg, image/JPG">
     <br> <br>
     <input type="submit" value="Agregar" *ngIf="!loading">
 </form>
