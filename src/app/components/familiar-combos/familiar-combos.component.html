@@ -1,0 +1,18 @@
+<br>
+<div class="myGridCards" >
+    <div class="myCard" *ngFor="let familiarCombo of familiarCombos">
+      <div >
+      <img [src]="familiarCombo.photoUrl" >
+    </div>
+  <div class="myCard-content">
+      <h5 class="">{{familiarCombo.name}}</h5>
+      <h6 class="">{{familiarCombo.description}}</h6>
+      <h6 class="">Ingredientes: {{familiarCombo.ingredients}}</h6>
+      <p class=""> Price: Q{{familiarCombo.price}} </p>
+      <a  href="https://api.whatsapp.com/send?phone=50254627157&text=&source=&data=&app_absent=">
+        Has tu pedido por whatsapp:  
+        <img src="../../../assets/img/whatsapp_icon-icons.com_62756.png" style="max-width: 70px; max-height: 70px;">
+      </a>
+    </div>
+  </div>
+  </div>
