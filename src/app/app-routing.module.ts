@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { CombosComponent } from './components/combos/combos.component';
+import { FamiliarCombosComponent } from './components/familiar-combos/familiar-combos.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NewsComponent } from './components/news/news.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'admin', component: AdminComponent },
   { path: 'news', component: NewsComponent },
   { path: 'saucers', component: SaucersComponent },
+  {path: 'familiarCombos', component: FamiliarCombosComponent },
   { path: 'combos', component: CombosComponent },
   { path: 'acercaDe', component: AcercaDeComponent },
   { path: '**', component: NotfoundComponent },
