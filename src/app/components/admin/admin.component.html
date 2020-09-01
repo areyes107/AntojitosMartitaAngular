@@ -16,13 +16,14 @@
 <form [formGroup]="toSubmitForm" (ngSubmit)="submit()">
     <input type="text" name="name" formControlName="name" placeholder="Nombre">
     <br> <br>
-    <input type="text" name="ingredients" formControlName="ingredients" placeholder="Ingredientes">
-    <br> <br>
-    <label> Precio</label>
-    <input type="number" name="price" formControlName="price" placeholder="Precio">
+    <textarea name="ingredients" formControlName="ingredients" placeholder="Ingredientes" cols="30" rows="10"></textarea>
     <br> <br>
     <textarea name="description" formControlName="description" cols="30" rows="10" placeholder="Descripción"></textarea>
-    <br>
+    <br> <br>
+    <label> Precio</label>
+    <br>    
+    <input type="number" name="price" formControlName="price" placeholder="Precio">
+    <br> <br>
     <input type="file" (change)="handdleFileChange($event)" accept="image/png, image/jpg, image/JPG">
     <br> <br>
     <input type="submit" value="Agregar" *ngIf="!loading">
