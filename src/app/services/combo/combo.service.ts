@@ -13,7 +13,9 @@ export class ComboService {
   constructor(private firestore: AngularFirestore) {}
 
   getCombos(): Observable<DocumentChangeAction<Combo>[]> {
-    return this.firestore.collection<Combo>('combos').snapshotChanges();
+    return this.firestore
+    .collection<Combo>('combos', ref => ref.orderBy('name', 'asc'))
+    .snapshotChanges();
   }
 
   getCombo(name: string) {
