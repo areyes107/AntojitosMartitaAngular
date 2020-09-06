@@ -14,7 +14,7 @@ export class FamiliarComboService {
 
   getFamiliarCombos(): Observable<DocumentChangeAction<FamiliarCombo>[]> {
     return this.firestore
-      .collection<FamiliarCombo>('familiarCombos')
+      .collection<FamiliarCombo>('familiarCombos', ref => ref.orderBy('name', 'asc'))
       .snapshotChanges();
   }
 
