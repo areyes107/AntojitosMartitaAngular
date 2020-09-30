@@ -9,6 +9,7 @@ import { ComboService } from '../../services/combo/combo.service';
 export class CombosComponent implements OnInit {
   combos = [];
   search;
+  photoUrlToShow: string;
 
   constructor(private comboService: ComboService) {}
 
@@ -22,6 +23,14 @@ export class CombosComponent implements OnInit {
         return combo.payload.doc.data();
       });
     });
+  }
+  
+  handleCloseModal(){
+    this.photoUrlToShow = null;
+  }
+
+  handleOpenModal(photoUrl: string){
+    this.photoUrlToShow = photoUrl;
   }
 
   onSubmit() {}

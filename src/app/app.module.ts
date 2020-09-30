@@ -22,6 +22,8 @@ import { SearchPipe } from './pipes/search.pipe';
 import { NewsComponent } from './components/news/news.component';
 import { FamiliarCombosComponent } from './components/familiar-combos/familiar-combos.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { ComboModalComponent } from './components/combo-modal/combo-modal.component';
+import { FamiliarComboModalComponent } from './components/familiar-combo-modal/familiar-combo-modal.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { ModalComponent } from './components/modal/modal.component';
     NewsComponent,
     FamiliarCombosComponent,
     ModalComponent,
+    ComboModalComponent,
+    FamiliarComboModalComponent,
   ],
   imports: [
     BrowserModule,

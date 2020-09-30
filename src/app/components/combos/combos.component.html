@@ -1,8 +1,9 @@
 <br>
+<div>
 <div class="myGridCards" >
   <div class="myCard" *ngFor="let combo of combos">
     <div >
-    <img [src]="combo.photoUrl" >
+    <img (click)="handleOpenModal(combo.photoUrl)" [src]="combo.photoUrl" >
   </div>
 <div class="myCard-content">
     <h5 class="">{{combo.name}}</h5>
@@ -16,4 +17,7 @@
   </div>
 </div>
 </div>
-<br>
+<app-combo-modal [showModal]="!!photoUrlToShow"(closeOutput)="handleCloseModal()">
+  <img [src]="photoUrlToShow" class="photoModal">
+</app-combo-modal>
+</div>

@@ -1,0 +1,9 @@
+<div class="back" (click)="handleCloseModal()" *ngIf="showModal">
+
+    <div class="content" (click)="handlePreventPropagation($event)">
+        <ng-content>
+
+        </ng-content>
+    </div>
+
+</div>
