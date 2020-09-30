@@ -1,0 +1,53 @@
+.myCard{
+  
+}
+
+.myCard img{
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  height: 360px;
+}
+
+.myGridCards{
+  display: grid;
+  grid-gap: 15px;
+  padding: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.myCard-content{
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0,0.15);
+  margin-bottom: 0.5em; 
+  padding: 16px;
+  margin: 0 16px;
+  margin-top: -32px;
+  position: relative;
+  background-color: white;
+}
+
+.myCard-content h5{
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.myCard-content h6{
+  text-align: center;
+  color: #777;
+}
+
+.myCard-content p{
+  text-align: right;
+  color: #888;
+  font-weight: bold;
+}
+
+.photoModal{
+  width: 100%;
+  max-height: 560px;
+  object-fit: contain;
+  border-radius: 24px;
+}
