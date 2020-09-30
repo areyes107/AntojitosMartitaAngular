@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NewsComponent } from './components/news/news.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
+import { PromotionsComponent } from './components/promotions/promotions.component';
 import { SaucersComponent } from './components/saucers/saucers.component';
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'familiarCombos', component: FamiliarCombosComponent },
   { path: 'combos', component: CombosComponent },
   { path: 'acercaDe', component: AcercaDeComponent },
+  { path: 'promotions', component: PromotionsComponent},
   { path: '**', component: NotfoundComponent },
 ];
 
