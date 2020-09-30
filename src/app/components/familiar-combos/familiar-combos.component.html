@@ -1,8 +1,10 @@
 <br>
+
+<div>
 <div class="myGridCards" >
     <div class="myCard" *ngFor="let familiarCombo of familiarCombos">
       <div >
-      <img [src]="familiarCombo.photoUrl" >
+      <img (click)="handleOpenModal(familiarCombo.photoUrl)"  [src]="familiarCombo.photoUrl" >
     </div>
   <div class="myCard-content">
       <h5 class="">{{familiarCombo.name}}</h5>
@@ -16,4 +18,8 @@
     </div>
   </div>
   </div>
-  <br>
+  <app-familiar-combo-modal [showModal]="!!photoUrlToShow"(closeOutput)="handleCloseModal()">
+    <img [src]="photoUrlToShow" class="photoModal">
+  </app-familiar-combo-modal>
+</div>
+  

@@ -44,3 +44,10 @@
   color: #888;
   font-weight: bold;
 }
+
+.photoModal{
+  width: 100%;
+  max-height: 560px;
+  object-fit: contain;
+  border-radius: 24px;
+}

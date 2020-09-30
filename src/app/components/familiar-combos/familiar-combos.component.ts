@@ -9,6 +9,7 @@ import { FamiliarComboService } from '../../services/familiar-combo/familiar-com
 export class FamiliarCombosComponent implements OnInit {
   familiarCombos = [];
   search;
+  photoUrlToShow: string;
 
   constructor(private familiarComboService: FamiliarComboService) {}
 
@@ -27,4 +28,12 @@ export class FamiliarCombosComponent implements OnInit {
   }
 
   onSubmit() {}
+
+  handleCloseModal(){
+    this.photoUrlToShow = null;
+  }
+
+  handleOpenModal(photoUrl: string){
+    this.photoUrlToShow = photoUrl;
+  }
 }
