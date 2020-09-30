@@ -9,6 +9,7 @@ import { SaucerService } from '../../services/saucer/saucer.service';
 export class SaucersComponent implements OnInit {
   saucers = [];
   search;
+  photoUrlToShow: string;
 
   constructor(private saucerService: SaucerService) { }
 
@@ -26,6 +27,15 @@ export class SaucersComponent implements OnInit {
 
   onSubmit(){
 
+  }
+
+
+  handleCloseModal(){
+    this.photoUrlToShow = null;
+  }
+
+  handleOpenModal(photoUrl: string){
+    this.photoUrlToShow = photoUrl;
   }
 
 }

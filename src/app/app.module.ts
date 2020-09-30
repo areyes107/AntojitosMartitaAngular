@@ -21,6 +21,7 @@ import { SaucersComponent } from './components/saucers/saucers.component';
 import { SearchPipe } from './pipes/search.pipe';
 import { NewsComponent } from './components/news/news.component';
 import { FamiliarCombosComponent } from './components/familiar-combos/familiar-combos.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { FamiliarCombosComponent } from './components/familiar-combos/familiar-c
     LoginComponent,
     NewsComponent,
     FamiliarCombosComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,

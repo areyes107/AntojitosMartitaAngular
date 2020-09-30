@@ -1,0 +1,18 @@
+.back{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    overflow: hidden;
+}
+
+.content{
+    border-radius: 24px;
+    overflow: hidden;
+    margin: auto;
+    max-width: 1024px;
+
+}

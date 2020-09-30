@@ -1,8 +1,10 @@
 <br>
+
+<div>
 <div class="myGridCards" >
   <div class="myCard" *ngFor="let saucer of saucers">
     <div >
-    <img [src]="saucer.photoUrl" >
+    <img (click)="handleOpenModal(saucer.photoUrl)" [src]="saucer.photoUrl" >
   </div>
 <div class="myCard-content">
     <h5 class="">{{saucer.name}}</h5>
@@ -16,7 +18,9 @@
   </div>
 </div>
 </div>
-<br>
-
+<app-modal [showModal]="!!photoUrlToShow"(closeOutput)="handleCloseModal()">
+  <img [src]="photoUrlToShow" class="photoModal">
+</app-modal>
+</div>
 
 
