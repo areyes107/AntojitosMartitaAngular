@@ -51,3 +51,26 @@
   object-fit: contain;
   border-radius: 24px;
 }
+
+.container-image {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  min-width: 380px;
+  position: relative;
+}
+
+.hero {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 24px;
+}
+
+.back-black {
+  width: 100%;
+  /*background-color: rgba(0, 0, 0, 0.2);*/
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
