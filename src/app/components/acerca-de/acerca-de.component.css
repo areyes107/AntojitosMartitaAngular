@@ -1,13 +1,13 @@
 .container-image {
-    display: block;
   margin-left: auto;
   margin-right: auto;
-    width: 50%;
-    position: relative;
+  width: 60%;
+  min-width: 360px;
+  position: relative;
 }
 
 .hero {
-    object-fit: cover;
-    width: 100%;
-    border-radius: 15px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 24px;
 }
