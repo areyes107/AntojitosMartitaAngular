@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'saucers', component: SaucersComponent },
   {path: 'familiarCombos', component: FamiliarCombosComponent },
   { path: 'combos', component: CombosComponent },
-  { path: 'acercaDe', component: AcercaDeComponent },
+  { path: 'aboutUs', component: AcercaDeComponent },
   { path: 'promotions', component: PromotionsComponent},
   { path: '**', component: NotfoundComponent },
 ];
